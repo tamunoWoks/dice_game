@@ -39,3 +39,6 @@ def play_turn(player_no, player_scores):
             print(f"You rolled a {value}")
 
         print(f"Your current score is: {current_score}")
+
+    player_scores[player_no] += current_score
+    print(f"Your total score is: {player_scores[player_no]}")
