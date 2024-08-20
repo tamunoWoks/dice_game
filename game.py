@@ -61,3 +61,9 @@ def main():
     players = get_number_of_players()
     max_score = 50
     player_scores = [0 for _ in range(players)]
+
+    # Continue the game until one or more players reach the maximum score
+    while max(player_scores) < max_score:
+        for player_no in range(players):
+            play_turn(player_no, player_scores)
+            display_leaderboard(player_scores)
