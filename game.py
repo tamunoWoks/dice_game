@@ -23,9 +23,9 @@ def get_number_of_players():
         else:
             print("Invalid input. Please enter a number")
 
-def play_turn(player_no, player_scores):
-    """Simulate a player's turn."""
-    print(f"\nPlayer number {player_no + 1} turn has just started")
+def play_turn(player_no, player_scores, is_human):
+    """Simulate a player's turn. AI players will use simple logic to play their turn."""
+    print(f"\n{'AI ' if not is_human else ''}Player {player_no + 1}'s turn has just started")
     print(f"Your total score is: {player_scores[player_no]}")
     current_score = 0
 
