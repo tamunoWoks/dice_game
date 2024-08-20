@@ -67,3 +67,14 @@ def main():
         for player_no in range(players):
             play_turn(player_no, player_scores)
             display_leaderboard(player_scores)
+
+    # Determine the highest score and identify the winners
+    max_score = max(player_scores)
+    winning_idx = [i + 1 for i, score in enumerate(player_scores) if score == max_score]
+    if len(winning_idx) > 1:
+        print(
+            f"\nIt's a tie between players: {', '.join(map(str, winning_idx))} with {max_score} points"
+        )
+    else:
+        print(f"\nPlayer number {winning_idx[0]} is the winner with {max_score} points")
+
