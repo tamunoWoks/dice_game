@@ -91,7 +91,7 @@ def main():
             f"\nIt's a tie between players: {', '.join(map(str, winning_idx))} with {max_score} points"
         )
     else:
-        print(f"\nPlayer number {winning_idx[0]} is the winner with {max_score} points")
+        print(f"\nPlayer number {winning_idx[0]} is the winner with {max_score} points") 
 
 if __name__ == "__main__":
     main()
