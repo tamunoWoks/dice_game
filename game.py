@@ -42,3 +42,15 @@ def play_turn(player_no, player_scores):
 
     player_scores[player_no] += current_score
     print(f"Your total score is: {player_scores[player_no]}")
+
+def display_leaderboard(player_scores):
+    """Display the current leaderboard based on player scores."""
+    print("\n--- Leaderboard ---")
+    sorted_scores = sorted(
+        [(i + 1, score) for i, score in enumerate(player_scores)],
+        key=lambda x: x[1],
+        reverse=True,
+    )
+    for position, (player_no, score) in enumerate(sorted_scores, 1):
+        print(f"{position}. Player {player_no} - {score} points")
+    print("-------------------")
