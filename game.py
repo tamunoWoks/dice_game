@@ -1,3 +1,7 @@
+"""
+Python script to implement a dice game for 2 to 4 players. 
+"""
+
 #Import necessary module
 import random
 
