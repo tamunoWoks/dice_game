@@ -17,3 +17,9 @@ def get_number_of_players():
                 print("Number must be between 2-4.")
         else:
             print("Invalid input. Please enter a number")
+
+def play_turn(player_no, player_scores):
+    """Simulate a player's turn."""
+    print(f"\nPlayer number {player_no + 1} turn has just started")
+    print(f"Your total score is: {player_scores[player_no]}")
+    current_score = 0
