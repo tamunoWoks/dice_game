@@ -77,10 +77,9 @@ def main():
     # Create a list to track which players are human (True) and AI (False)
     is_human = [True] * human_players + [False] * ai_players
 
-    # Continue the game until one or more players reach the maximum score
     while max(player_scores) < max_score:
-        for player_no in range(players):
-            play_turn(player_no, player_scores)
+        for player_no in range(total_players):
+            play_turn(player_no, player_scores, is_human[player_no])
             display_leaderboard(player_scores)
 
     # Determine the highest score and identify the winners
