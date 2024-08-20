@@ -29,10 +29,17 @@ def play_turn(player_no, player_scores, is_human):
     print(f"Your total score is: {player_scores[player_no]}")
     current_score = 0
 
-    while True:
-        should_roll = input("Would you like to roll (y)? ")
-        if should_roll.lower() != "y":
-            break
+   while True:
+        if is_human:
+            should_roll = input("Would you like to roll (y)? ")
+            if should_roll.lower() != "y":
+                break
+        else:
+            # AI logic: roll until current_score reaches 10 or roll a 1
+            should_roll = "y"
+            if current_score >= 10:
+                print("AI decided to stop rolling.")
+                break
 
         value = roll()
         if value == 1:
