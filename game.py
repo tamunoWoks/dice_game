@@ -10,13 +10,14 @@ def roll():
     return random.randint(1, 6)
     
 def get_number_of_players():
-    """Prompt the user for the number of players and validate the input."""
+    """Prompt the user for the number of human and AI players and validate the input."""
     while True:
         players = input("Enter the number of players (2-4): ")
         if players.isdigit():
             players = int(players)
-            if 2 <= players <= 4:
-                return players
+            if 1 <= players <= 4:
+                ai_players = 4 - players
+                return players, ai_players
             else:
                 print("Number must be between 2-4.")
         else:
