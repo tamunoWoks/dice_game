@@ -78,3 +78,6 @@ def main():
     else:
         print(f"\nPlayer number {winning_idx[0]} is the winner with {max_score} points")
 
+if __name__ == "__main__":
+    main()
+
