@@ -74,6 +74,9 @@ def main():
     max_score = 50
     player_scores = [0 for _ in range(total_players)]
 
+    # Create a list to track which players are human (True) and AI (False)
+    is_human = [True] * human_players + [False] * ai_players
+
     # Continue the game until one or more players reach the maximum score
     while max(player_scores) < max_score:
         for player_no in range(players):
