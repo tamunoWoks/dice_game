@@ -37,3 +37,5 @@ def play_turn(player_no, player_scores):
         else:
             current_score += value
             print(f"You rolled a {value}")
+
+        print(f"Your current score is: {current_score}")
