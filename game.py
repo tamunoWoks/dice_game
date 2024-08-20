@@ -54,3 +54,7 @@ def display_leaderboard(player_scores):
     for position, (player_no, score) in enumerate(sorted_scores, 1):
         print(f"{position}. Player {player_no} - {score} points")
     print("-------------------")
+
+def main():
+    #Main function to control the game flow
+    ...
