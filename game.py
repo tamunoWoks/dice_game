@@ -56,5 +56,8 @@ def display_leaderboard(player_scores):
     print("-------------------")
 
 def main():
-    #Main function to control the game flow
-    ...
+    """Main function to control the game flow"""
+    # Get the number of players
+    players = get_number_of_players()
+    max_score = 50
+    player_scores = [0 for _ in range(players)]
