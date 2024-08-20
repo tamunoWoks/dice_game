@@ -28,3 +28,12 @@ def play_turn(player_no, player_scores):
         should_roll = input("Would you like to roll (y)? ")
         if should_roll.lower() != "y":
             break
+
+        value = roll()
+        if value == 1:
+            print("You rolled a 1! Turn done!")
+            current_score = 0
+            break
+        else:
+            current_score += value
+            print(f"You rolled a {value}")
