@@ -23,3 +23,8 @@ def play_turn(player_no, player_scores):
     print(f"\nPlayer number {player_no + 1} turn has just started")
     print(f"Your total score is: {player_scores[player_no]}")
     current_score = 0
+
+    while True:
+        should_roll = input("Would you like to roll (y)? ")
+        if should_roll.lower() != "y":
+            break
