@@ -68,11 +68,11 @@ def display_leaderboard(player_scores):
     print("-------------------")
 
 def main():
-    """Main function to control the game flow"""
-    # Get the number of players
-    players = get_number_of_players()
+    # Get the number of players and AI players
+    human_players, ai_players = get_number_of_players()
+    total_players = human_players + ai_players
     max_score = 50
-    player_scores = [0 for _ in range(players)]
+    player_scores = [0 for _ in range(total_players)]
 
     # Continue the game until one or more players reach the maximum score
     while max(player_scores) < max_score:
